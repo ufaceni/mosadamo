@@ -1,9 +1,12 @@
-.naslov{
-    position:relative;
-    float: left;
-    height :100px;
-    width:100%;
-    padding-left:40%;
+@font-face{
+    font-family:"TalkingToTheMoon";
+    src : url("/home/pepa/git-projects/mosadamo/fonts/kimberly-geswein_talking-to-the-moon/TalkingToTheMoon.ttf");
+}
+
+.naslov-holder{
+    height:250px;
+    width:900px;
+    margin: 0 auto;
 }
 
 img{
@@ -19,19 +22,33 @@ img:hover{
 
 }
 
+.naslov{
+    padding-left: 8%;
+    width:900px;
+    height:100px;
+    margin: 0 auto;
+}
+
+.authors{
+    font-family: "TalkingToTheMoon";
+    font-size:40px;
+}
+
 h1{
     position:relative;
     float: left;
     height: 100%;
     padding-top:20px;
+    font-size:60px;
 }
 
 h4{
     position:relative;
     float:left;
     height:100%;
-    padding-top: 43px;
+    padding-top: 60px;
     padding-left:10px;
+    font-style: italic;
 }
 
 .content{
@@ -48,6 +65,27 @@ h4{
     background: gray;
     width:250px;
     height:350px;
+}
+
+.content-item > .desc {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background: rgba(0, 0, 0, .4);
+}
+
+.content-item > .desc > div {
+    position: relative;
+    display: block;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.content-item:hover  .desc {
+    display: block;
 }
 
 .modal {
@@ -143,7 +181,7 @@ h4{
     }
     .content{
        
-        width:270px;
+        width:250px;
     }
 }
 
