@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+
+    {% load static %}
+    <link rel="shortcut icon" href="{% static 'images/logo.png' %}"/>
+    <link href="{% static 'css/default/theme.css' %}" rel='stylesheet'/>
+</head>
+<body>
+    {% include "header.html" %} 
+    {% block content %}
+    {% endblock %}
+    <script src="{% static 'js/app.js' %}"></script>
+</body>
+</html>

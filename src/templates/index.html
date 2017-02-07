@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="content">
+    <div id="myModal" class="modal">
+        <span class="close" onclick="document.getElementById('myModal').style.display='none'">&times;</span>
+
+        <!-- Modal Content (The Image) -->
+        <img class="modal-content" id="imageModal">
+
+        <!-- Modal Caption (Image Text) -->
+        <div id="caption"></div>
+    </div>
+    <!-- 
+    <div class="content-item">
+        <img onclick = "modal(this.id);" id="haver1" src="images/haver1.jpg" alt="Haver cooler">
+    </div>
+    <div class="content-item">
+        <img onclick = "modal(this.id)" id="pepa1" src="images/pepa1.jpg" alt="Pepa pozer">
+    </div>
+    <div class="content-item">
+        <img onclick = "modal(this.id)" id="pepa2" src="images/pepa2.jpg" alt="Pepa gleda u telefon">
+    </div>
+    <div class="content-item">
+        <img onclick = "modal(this.id)" id="haver2" src="images/haver2.jpg" alt="Haver nasmijan">
+    </div>
+    <div class="content-item">
+        <img onclick = "modal(this.id)" id="haver3" src="images/haver3.jpg" alt="Haver ozbiljan">
+    </div>
+    -->
+    
+    {% load static %}
+    {% for image in images_list  %} 
+        <div class="content-item">
+            {% static "" as baseUrl %}
+            <img onclick = "modal(this.id)" id="{{ forloop.counter }}" src="{{ baseUrl }}images/{{ image.url }}" />
+            {{ image.url }}
+        </div>
+    {% endfor %}
+
+</div>
+{% endblock %}
