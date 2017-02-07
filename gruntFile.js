@@ -101,7 +101,7 @@ module.exports = function (grunt) {
             // Distibution
             dist: {
                 options: {
-                    style: 'compressed',
+                    style: 'expanded',
                     sourcemap: 'none',
                     unixNewlines: true,
                     noCache: true
@@ -176,6 +176,7 @@ module.exports = function (grunt) {
     // Develop task
     grunt.registerTask('default', [
         'concat',
+        'sass',
         'copy',
         'watch'
     ]);
