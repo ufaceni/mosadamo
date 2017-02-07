@@ -174,19 +174,10 @@ module.exports = function (grunt) {
     grunt.loadNpmTasks('grunt-gitinfo');
 
     // Develop task
-    grunt.registerTask('dev', [
+    grunt.registerTask('default', [
         'concat',
         'copy',
         'watch'
-    ]);
-
-    grunt.registerTask('dist', [
-        'clean:dist',
-        'sass:dist',
-        'autoprefixer:dist',
-        'concat',
-        'copy:dist',
-        'uglify:dist'
     ]);
 };
 
