@@ -57,6 +57,16 @@ module.exports = function (grunt) {
                         ],
 
                         dest: '<%= settings.dirs.jsCssDist %>/images/common'
+                    },
+
+                    {
+                        expand: true,
+                        cwd: '<%= settings.dirs.src %>/sass/assets/fonts/',
+                        src: [
+                            '**/*'
+                        ],
+
+                        dest: '<%= settings.dirs.jsCssDist %>/fonts/'
                     }  
                 ]
             }
@@ -141,7 +151,7 @@ module.exports = function (grunt) {
             },
 
             sass: {
-                files: '<%= settings.dirs.src %>/scss/**/*.scss',
+                files: '<%= settings.dirs.src %>/sass/**/*.scss',
                 tasks: ['sass', 'autoprefixer']
             },
 

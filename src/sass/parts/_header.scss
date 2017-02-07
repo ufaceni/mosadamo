@@ -1,0 +1,46 @@
+header {
+    position: relative;
+    height: 200px;
+    
+    .wrapper {
+        width:65%; 
+        margin: 0 auto;
+    }
+
+    .title {
+        padding: 30px 0 10px 0;
+        font-size: 50px;
+
+        span { 
+            font: {
+                family: 'primary';
+                size: 20px;
+                style: italic; 
+            }
+        }
+    }
+
+    .authors {
+        font-family: 'primary';
+        font-size: 30px;
+        text-align: right;
+    }
+
+    .tab-holder {
+        margin-top: 40px;
+        padding: 5px;
+        text-align: center;
+    }
+
+    .tab {
+        font-weight: bold;
+        opacity: 0.7;
+        margin: 0 5px;
+    }
+
+    .tab:hover {
+        opacity: 1;
+        transition: 300ms;
+        cursor: pointer;
+    }
+}

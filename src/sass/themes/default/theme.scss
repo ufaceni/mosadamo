@@ -2,4 +2,15 @@
 
 // Import globals
 @import '../../globals/variables';
-@import '../../globals/main';
+@import '../../globals/common';
+@import '../../globals/fonts';
+
+@import '../../parts/header';
+@import '../../parts/home-content';
+@import '../../parts/animations';
+@import '../../parts/modals';
+
+@import '../../parts/responsive';
+
+@import '../../parts/main';
+

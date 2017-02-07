@@ -1,0 +1,62 @@
+.content{
+
+    width:900px;
+    margin: 0 auto;
+}
+
+.content-item{
+    position:relative;
+    float:left;
+    margin-right:30px;
+    margin-bottom: 20px;
+    background: gray;
+    width:250px;
+    height:350px;
+}
+
+.content-item > .desc {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background: rgba(0, 0, 0, .4);
+}
+
+.content-item > .desc > div {
+    position: relative;
+    display: block;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.content-item:hover  .desc {
+    display: block;
+}
+
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+}
+.modal-content {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 540px;
+    height: 80%;
+}
+
+#imageModal {
+    opacity:1;
+}
+
