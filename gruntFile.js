@@ -18,7 +18,8 @@ module.exports = function (grunt) {
         // Clean task
         clean: {
             dist: [
-                '<%= settings.dirs.jsCssDist %>/**/*',
+                '<%= settings.dirs.jsCssDist %>/css/**/*',
+                '<%= settings.dirs.jsCssDist %>/images/common/**/*',
                 '<%= settings.dirs.indexDist %>/**/*'
             ]
         },
@@ -55,7 +56,7 @@ module.exports = function (grunt) {
                             '**/*'
                         ],
 
-                        dest: '<%= settings.dirs.jsCssDist %>/images'
+                        dest: '<%= settings.dirs.jsCssDist %>/images/common'
                     }  
                 ]
             }
@@ -141,12 +142,7 @@ module.exports = function (grunt) {
 
             sass: {
                 files: '<%= settings.dirs.src %>/scss/**/*.scss',
-                tasks: ['sass']
-            },
-
-            css: {
-                files: 'static/css/**/*.css',
-                tasks: ['autoprefixer']
+                tasks: ['sass', 'autoprefixer']
             },
 
             concat: {

@@ -32,7 +32,7 @@
     {% for image in images_list  %} 
         <div class="content-item">
             {% static "" as baseUrl %}
-            <img onclick = "modal(this.id)" id="{{ forloop.counter }}" src="{{ baseUrl }}images/{{ image.url }}" />
+            <img onclick = "modal(this.id)" id="{{ forloop.counter }}" src="../{{ image.url }}" />
             {{ image.url }}
         </div>
     {% endfor %}
