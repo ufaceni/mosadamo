@@ -1,0 +1,242 @@
+@font-face{
+    font-family:"TalkingToTheMoon";
+    src : url("/home/pepa/git-projects/mosadamo/fonts/kimberly-geswein_talking-to-the-moon/TalkingToTheMoon.ttf");
+}
+
+.naslov-holder{
+    height:180px;
+    width:900px;
+    margin: 0 auto;
+}
+
+img{
+    width:250px;
+    height:350px;
+    opacity:0.7;
+    border-radius:5px;
+}
+img:hover{
+    opacity:1;
+    transition:300ms;
+    cursor: pointer;
+
+}
+
+.naslov{
+    padding-left: 8%;
+    width:900px;
+    height:100px;
+    margin: 0 auto;
+}
+
+.authors{
+    font-family: "TalkingToTheMoon";
+    font-size:40px;
+}
+
+h1{
+    position:relative;
+    float: left;
+    height: 100%;
+    padding-top:20px;
+    font-size:60px;
+}
+
+h4{
+    position:relative;
+    float:left;
+    height:100%;
+    padding-top: 60px;
+    padding-left:10px;
+    font-style: italic;
+}
+
+.tab-holder{
+    width:900px;
+    height:40px;
+    margin:0 auto;
+    margin-bottom: 15px;
+    padding-left:8%;
+}
+
+.tab{
+    height:30px;
+    position:relative;
+    float:left;
+    padding:10px;
+    font-weight: bold;
+    opacity:0.7;
+}
+
+.tab:hover{
+    opacity:1;
+    transition: 300ms;
+    cursor: pointer;
+}
+
+.content{
+
+    width:900px;
+    margin: 0 auto;
+}
+
+.content-item{
+    position:relative;
+    float:left;
+    margin-right:30px;
+    margin-bottom: 20px;
+    background: gray;
+    width:250px;
+    height:350px;
+}
+
+.content-item > .desc {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background: rgba(0, 0, 0, .4);
+}
+
+.content-item > .desc > div {
+    position: relative;
+    display: block;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.content-item:hover  .desc {
+    display: block;
+}
+
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+}
+.modal-content {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 540px;
+    height: 80%;
+}
+
+#imageModal {
+    opacity:1;
+}
+
+/* Caption of Modal Image (Image Text) - Same Width as the Image */
+#caption {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+    text-align: center;
+    color: #ccc;
+    padding: 10px 0;
+    height: 150px;
+}
+
+/* Add Animation - Zoom in the Modal */
+.modal-content, #caption { 
+    -webkit-animation-name: zoom;
+    -webkit-animation-duration: 0.6s;
+    animation-name: zoom;
+    animation-duration: 0.6s;
+}
+
+@-webkit-keyframes zoom {
+    from {-webkit-transform:scale(0)} 
+    to {-webkit-transform:scale(1)}
+}
+
+@keyframes zoom {
+    from {transform:scale(0)} 
+    to {transform:scale(1)}
+}
+
+/* The Close Button */
+.close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* 100% Image Width on Smaller Screens */
+@media only screen and (max-width: 700px){
+    .modal-content {
+        width: 100%;
+    }
+}
+/* Smartphones (portrait and landscape) ----------- */
+@media  (min-width : 320px) and (max-width : 480px) {
+    .naslov{
+        padding-left:30%;
+    }
+    h1{
+        font-size:20px;
+    }
+    h4{
+        font-size:13px;
+        padding-top:35px;
+    }
+    .content{
+       
+        width:250px;
+    }
+}
+
+/* iPads (portrait and landscape) ----------- */
+@media (min-width : 768px) and (max-width : 1024px) {
+    .naslov{
+        padding-left:35%;
+    }
+    h1{
+        font-size:35px;
+    }
+    h4{
+    
+        padding-top:42px;
+    }
+    .content{
+        width:600px;
+    }
+}
+
+@media (min-width : 481px) and (max-width : 767px) {
+    .naslov{
+        padding-left:35%;
+    }
+    h1{
+        font-size:28px;
+    }
+    h4{
+        font-size:18px;
+        padding-top:37px;
+    }
+    .content{
+        width:600px;
+    }
+}
