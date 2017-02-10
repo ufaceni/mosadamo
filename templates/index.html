@@ -1,22 +1,18 @@
 {% extends "base.html" %}
 {% block content %}
-<div class="content">
-    <div id="myModal" class="modal">
-        <span class="close" onclick="document.getElementById('myModal').style.display='none'">&times;</span>
-
-        <!-- Modal Content (The Image) -->
-        <img class="modal-content" id="imageModal">
-
-        <!-- Modal Caption (Image Text) -->
-        <div id="caption"></div>
-    </div>   
+<div class="content container">
+   
     {% load static %}
     {% for image in images_list  %} 
         <div class="content-item">
             {% static "" as baseUrl %}
-            <img onclick = "modal(this.id)" id="{{ forloop.counter }}" src="../{{ image.url }}" />
+            <img id="{{ forloop.counter }}" src="../{{ image.url }}" />
+            <div id="{{ forloop.counter }}" class="content-header-text">{{ image.title }}</div>
+            <div class="content-text">{{ image.desc }}</div>
         </div>
     {% endfor %}
-
+    <footer>
+        Powered by mosadamo 2017.
+    </footer>
 </div>
 {% endblock %}

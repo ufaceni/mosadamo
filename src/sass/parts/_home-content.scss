@@ -1,62 +1,41 @@
-.content{
+.content-item {
+    margin-top: 30px;
+    width: 100%;
+    height: 300px;
+    background: $main-content-color;
+    border-radius: 30px;
 
-    width:900px;
-    margin: 0 auto;
-}
+    img {
+        position: relative;
+        float: left;
+        width: 300px;
+        height: 100%;
+        opacity: 0.9;
+    }
 
-.content-item{
-    position:relative;
-    float:left;
-    margin-right:30px;
-    margin-bottom: 20px;
-    background: gray;
-    width:250px;
-    height:350px;
-}
+    img:hover {
+        opacity: 1;
+        transition: 300ms;
+        cursor: pointer;
+    }
 
-.content-item > .desc {
-    display: none;
-    position: absolute;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
-    background: rgba(0, 0, 0, .4);
-}
+    .content-header-text {
+        position: relative;
+        float: left;
+        width: 500px;
+        padding: 20px 20px;
 
-.content-item > .desc > div {
-    position: relative;
-    display: block;
-    top: 50%;
-    transform: translateY(-50%);
-}
+        font: {
+                size: 30px;
+                weight: bold;
+            }
+    }
 
-.content-item:hover  .desc {
-    display: block;
+    .content-text {
+        position: relative;
+        float: left;
+        width: 500px;
+        padding-left: 20px;
+        font-style: italic;
+    }
 }
-
-.modal {
-    display: none; /* Hidden by default */
-    position: fixed; /* Stay in place */
-    z-index: 1; /* Sit on top */
-    padding-top: 100px; /* Location of the box */
-    left: 0;
-    top: 0;
-    width: 100%; /* Full width */
-    height: 100%; /* Full height */
-    overflow: auto; /* Enable scroll if needed */
-    background-color: rgb(0,0,0); /* Fallback color */
-    background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
-}
-.modal-content {
-    margin: auto;
-    display: block;
-    width: 80%;
-    max-width: 540px;
-    height: 80%;
-}
-
-#imageModal {
-    opacity:1;
-}
-

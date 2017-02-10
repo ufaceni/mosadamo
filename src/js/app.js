@@ -24,9 +24,9 @@ function logd() {
         utilities.log.apply(null, arguments);
 }
 
-var modalHolder = document.getElementById('myModal');
+//var modalHolder = document.getElementById('myModal');
 
-function modal (id){
+/*function modal (id){
     modalHolder.style.display = "block";
     var modalImg = document.getElementById("imageModal");
     var captionText = document.getElementById("caption");
@@ -35,24 +35,16 @@ function modal (id){
     captionText.innerHTML = element.alt;
 }
 
-var span = document.getElementsByClassName("close")[0];
+//var span = document.getElementsByClassName("close")[0];
 
-span.onclick = function() {
+/*span.onclick = function() {
     modalHolder.style.display = "none";
-}
+}*/
 
-function removeWebHostStuff() {
-    var url = location.href;
-    if (url.indexOf('file:///') === -1 && url.indexOf('localhost') === -1) {
-        var divs = document.body.getElementsByTagName('div');
-        var webHostDiv = divs[divs.length-1];
-        webHostDiv.parentNode.removeChild(webHostDiv);
-    }
-}
+
 
 window.onload = function() {
-   // setTimeout(removeWebHostStuff, 1000);
-   removeWebHostStuff();
+   
 };
 
 

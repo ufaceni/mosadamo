@@ -22,6 +22,7 @@ body {
 header {
   position: relative;
   height: 200px;
+  color: #1A1423;
 }
 header .wrapper {
   width: 65%;
@@ -40,11 +41,13 @@ header .authors {
   font-family: 'primary';
   font-size: 30px;
   text-align: right;
+  color: #82204A;
 }
 header .tab-holder {
   margin-top: 40px;
   padding: 5px;
   text-align: center;
+  color: #464655;
 }
 header .tab {
   font-weight: bold;
@@ -58,135 +61,47 @@ header .tab:hover {
   cursor: pointer;
 }
 
-.content {
-  width: 900px;
-  margin: 0 auto;
-}
-
 .content-item {
+  margin-top: 30px;
+  width: 100%;
+  height: 300px;
+  background: navajowhite;
+  border-radius: 30px;
+}
+.content-item img {
   position: relative;
   float: left;
-  margin-right: 30px;
-  margin-bottom: 20px;
-  background: gray;
-  width: 250px;
-  height: 350px;
-}
-
-.content-item > .desc {
-  display: none;
-  position: absolute;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  background: rgba(0, 0, 0, 0.4);
-}
-
-.content-item > .desc > div {
-  position: relative;
-  display: block;
-  top: 50%;
-  -webkit-transform: translateY(-50%);
-          transform: translateY(-50%);
-}
-
-.content-item:hover .desc {
-  display: block;
-}
-
-.modal {
-  display: none;
-  /* Hidden by default */
-  position: fixed;
-  /* Stay in place */
-  z-index: 1;
-  /* Sit on top */
-  padding-top: 100px;
-  /* Location of the box */
-  left: 0;
-  top: 0;
-  width: 100%;
-  /* Full width */
+  width: 300px;
   height: 100%;
-  /* Full height */
-  overflow: auto;
-  /* Enable scroll if needed */
-  background-color: black;
-  /* Fallback color */
-  background-color: rgba(0, 0, 0, 0.9);
-  /* Black w/ opacity */
+  opacity: 0.9;
 }
-
-.modal-content {
-  margin: auto;
-  display: block;
-  width: 80%;
-  max-width: 540px;
-  height: 80%;
-}
-
-#imageModal {
+.content-item img:hover {
   opacity: 1;
-}
-
-/* Add Animation - Zoom in the Modal */
-.modal-content, #caption {
-  -webkit-animation-name: zoom;
-  -webkit-animation-duration: 0.6s;
-  -webkit-animation-name: zoom;
-          animation-name: zoom;
-  -webkit-animation-duration: 0.6s;
-          animation-duration: 0.6s;
-}
-
-@-webkit-keyframes zoom {
-  from {
-    -webkit-transform: scale(0);
-  }
-  to {
-    -webkit-transform: scale(1);
-  }
-}
-@keyframes zoom {
-  from {
-    -webkit-transform: scale(0);
-            transform: scale(0);
-  }
-  to {
-    -webkit-transform: scale(1);
-            transform: scale(1);
-  }
-}
-/* Caption of Modal Image (Image Text) - Same Width as the Image */
-#caption {
-  margin: auto;
-  display: block;
-  width: 80%;
-  max-width: 700px;
-  text-align: center;
-  color: #ccc;
-  padding: 10px 0;
-  height: 150px;
-}
-
-/* The Close Button */
-.close {
-  position: absolute;
-  top: 15px;
-  right: 35px;
-  color: #f1f1f1;
-  font-size: 40px;
-  font-weight: bold;
-  -webkit-transition: 0.3s;
-          transition: 0.3s;
-}
-
-.close:hover,
-.close:focus {
-  color: #bbb;
-  text-decoration: none;
+  -webkit-transition: 300ms;
+          transition: 300ms;
   cursor: pointer;
+}
+.content-item .content-header-text {
+  position: relative;
+  float: left;
+  width: 500px;
+  padding: 20px 20px;
+  font-size: 30px;
+  font-weight: bold;
+}
+.content-item .content-text {
+  position: relative;
+  float: left;
+  width: 500px;
+  padding-left: 20px;
+  font-style: italic;
+}
+
+footer {
+  width: 100%;
+  text-align: center;
+  padding-top: 100px;
+  padding-bottom: 10px;
 }
 
 /* 100% Image Width on Smaller Screens */
@@ -249,17 +164,4 @@ header .tab:hover {
   .content {
     width: 600px;
   }
-}
-img {
-  width: 250px;
-  height: 350px;
-  opacity: 0.7;
-  border-radius: 5px;
-}
-
-img:hover {
-  opacity: 1;
-  -webkit-transition: 300ms;
-          transition: 300ms;
-  cursor: pointer;
 }

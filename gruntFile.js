@@ -30,17 +30,6 @@ module.exports = function (grunt) {
                 files: [
                     {
                         expand: true,
-                        cwd: '<%= settings.dirs.src %>/',
-                        src: [
-                            'js/**/*',
-                            'css/**/*'
-                        ],
-
-                        dest: '<%= settings.dirs.jsCssDist %>/'
-                    },
-
-                    {
-                        expand: true,
                         cwd: '<%= settings.dirs.src %>/templates/',
                         src: [
                             '**/*'

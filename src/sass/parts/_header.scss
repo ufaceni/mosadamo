@@ -1,6 +1,7 @@
 header {
     position: relative;
     height: 200px;
+    color: $header-text-color;
     
     .wrapper {
         width:65%; 
@@ -15,7 +16,7 @@ header {
             font: {
                 family: 'primary';
                 size: 20px;
-                style: italic; 
+                style: italic;
             }
         }
     }
@@ -24,12 +25,14 @@ header {
         font-family: 'primary';
         font-size: 30px;
         text-align: right;
+        color: $important-text;
     }
 
     .tab-holder {
         margin-top: 40px;
         padding: 5px;
         text-align: center;
+        color: $tab-text-color;
     }
 
     .tab {
