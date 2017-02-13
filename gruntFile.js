@@ -19,6 +19,7 @@ module.exports = function (grunt) {
         clean: {
             dist: [
                 '<%= settings.dirs.jsCssDist %>/css/**/*',
+                '<%= settings.dirs.jsCssDist %>/js/**/*',
                 '<%= settings.dirs.jsCssDist %>/images/common/**/*',
                 '<%= settings.dirs.indexDist %>/**/*'
             ]
@@ -56,6 +57,16 @@ module.exports = function (grunt) {
                         ],
 
                         dest: '<%= settings.dirs.jsCssDist %>/fonts/'
+                    },
+
+                    {
+                        expand: true,
+                        cwd: '<%= settings.dirs.src %>/js/',
+                        src: [
+                            '**/*'
+                        ],
+
+                        dest: '<%= settings.dirs.jsCssDist %>/js'
                     }  
                 ]
             }
@@ -69,7 +80,7 @@ module.exports = function (grunt) {
                     // main
                     '<%= settings.dirs.src %>/app/utilities.js',
                     '<%= settings.dirs.src %>/app/main.js',
-                    '<%= settings.dirs.src %>/app/app.js',
+                    '<%= settings.dirs.src %>/app/app.js'
                 ],
 
                 dest: '<%= settings.dirs.src %>/js/app.js'

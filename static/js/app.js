@@ -24,27 +24,50 @@ function logd() {
         utilities.log.apply(null, arguments);
 }
 
-//var modalHolder = document.getElementById('myModal');
+var slideIndex = 0;
 
-/*function modal (id){
-    modalHolder.style.display = "block";
-    var modalImg = document.getElementById("imageModal");
-    var captionText = document.getElementById("caption");
-    var element = document.getElementById(id);
-    modalImg.src = element.src;
-    captionText.innerHTML = element.alt;
+function startTimer(){
+    var i,
+        slides = document.getElementsByClassName("mySlides"),
+        dots = document.getElementsByClassName("dot");
+        for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";  
+    }
+    slideIndex++;
+    if (slideIndex> slides.length) {slideIndex = 1}    
+    for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+    }
+    slides[slideIndex-1].style.display = "block";  
+    dots[slideIndex-1].className += " active";
+    setTimeout(startTimer, 6000);
 }
 
-//var span = document.getElementsByClassName("close")[0];
+var url = {
+    tabUrl: {
+        news: 'base.html',
+        about: 'about.html',
+        fashion: 'fashion.html',
+        wear: 'wear.html',
+        contact: 'contact.html'
+    }
+}
 
-/*span.onclick = function() {
-    modalHolder.style.display = "none";
-}*/
+function tabClick(e){
+    for(var i in url.tabUrl){
+        if(e.id === i){
+            location.href = url.tabUrl[i];
+        }
+    }
+}
 
-
+var main = {
+    onLoad: function(){
+    }
+}
 
 window.onload = function() {
-   
+    main.onLoad();
 };
 
 
@@ -52,6 +75,7 @@ var app = {
     /** main onload function */
     onLoad: function() {
         logd('loaded'); 
+        startTimer();
     }
 };
 
@@ -59,3 +83,4 @@ var app = {
 window.onload = function() {
     app.onLoad();
 };
+ 

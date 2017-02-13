@@ -10,4 +10,8 @@ class Image(models.Model):
     title    = models.CharField(max_length=200)
     desc     = models.CharField(max_length=200)
    
-
+class Slider(models.Model):
+    date_pub = models.DateTimeField('date published')
+    url      = models.ImageField(upload_to='static/images/slider', default='static/images/slider')
+    title    = models.CharField(max_length=200)
+    desc     = models.CharField(max_length=200)

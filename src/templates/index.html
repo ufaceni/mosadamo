@@ -1,18 +1,46 @@
 {% extends "base.html" %}
 {% block content %}
-<div class="content container">
+<div class="content-left">
+    <div class="follow-us">
+        <div class="follow-us-text">
+            Follow Us
+        </div>
+        <div class="fb"></div>
+        <div class="instagram"></div>
+        <div class="twitter"></div>
+        <div class="tumblr"></div>
+    </div>
+</div>
+<div class="content ">
+    {% load static %}
+    <div class="slideshow-container container ">
+     
+        {% for slider in slider_list  %} 
+            <div class="mySlides fade ">
+                <img src="../{{ slider.url }}" style="width:100%">
+            </div>
+        {% endfor %}
+    </div>
+    <div class="dots">
+        {% for slider in slider_list  %}
+            <span class="dot"></span>
+        {% endfor %}
+    </div>
    
     {% load static %}
     {% for image in images_list  %} 
-        <div class="content-item">
+    <div class="container">
+        <div class="content-item ">
             {% static "" as baseUrl %}
             <img id="{{ forloop.counter }}" src="../{{ image.url }}" />
             <div id="{{ forloop.counter }}" class="content-header-text">{{ image.title }}</div>
             <div class="content-text">{{ image.desc }}</div>
         </div>
+    </div>
     {% endfor %}
     <footer>
-        Powered by mosadamo 2017.
+        <span>Powered by mosadamo 2017.</span>
     </footer>
 </div>
+
 {% endblock %}

@@ -2,6 +2,7 @@ var app = {
     /** main onload function */
     onLoad: function() {
         logd('loaded'); 
+        startTimer();
     }
 };
 
@@ -9,3 +10,4 @@ var app = {
 window.onload = function() {
     app.onLoad();
 };
+ 

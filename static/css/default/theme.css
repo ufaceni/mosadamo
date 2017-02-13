@@ -5,7 +5,7 @@ body {
 }
 
 .container {
-  width: 900px;
+  width: 60%;
   margin: 0 auto;
 }
 
@@ -13,6 +13,18 @@ body {
   content: "";
   display: table;
   clear: both;
+}
+
+.content-left {
+  position: relative;
+  float: left;
+  width: 20%;
+  display: block;
+}
+
+.content-right {
+  float: right;
+  width: 18%;
 }
 
 @font-face {
@@ -37,22 +49,33 @@ header .title span {
   font-size: 20px;
   font-style: italic;
 }
+header .title:hover {
+  cursor: pointer;
+}
 header .authors {
   font-family: 'primary';
   font-size: 30px;
   text-align: right;
   color: #82204A;
 }
+header .authors:hover {
+  cursor: pointer;
+}
 header .tab-holder {
   margin-top: 40px;
   padding: 5px;
   text-align: center;
-  color: #464655;
+  background: lightgray;
+  color: black;
+  border-radius: 10px;
 }
 header .tab {
   font-weight: bold;
   opacity: 0.7;
   margin: 0 5px;
+  border-right: solid black 1px;
+  border-left: solid black 1px;
+  border-radius: 1px;
 }
 header .tab:hover {
   opacity: 1;
@@ -62,16 +85,17 @@ header .tab:hover {
 }
 
 .content-item {
-  margin-top: 30px;
+  position: relative;
+  float: left;
+  margin-top: 10px;
   width: 100%;
-  height: 300px;
-  background: navajowhite;
-  border-radius: 30px;
+  height: 150px;
+  background: #FFFCF2;
 }
 .content-item img {
   position: relative;
   float: left;
-  width: 300px;
+  width: 150px;
   height: 100%;
   opacity: 0.9;
 }
@@ -86,8 +110,13 @@ header .tab:hover {
   float: left;
   width: 500px;
   padding: 20px 20px;
-  font-size: 30px;
+  opacity: 0.8;
+  font-size: 25px;
   font-weight: bold;
+}
+.content-item .content-header-text:hover {
+  opacity: 1;
+  cursor: pointer;
 }
 .content-item .content-text {
   position: relative;
@@ -97,71 +126,374 @@ header .tab:hover {
   font-style: italic;
 }
 
-footer {
+.slideshow-container {
+  margin-top: 10px;
+  max-width: 2000px;
+  position: relative;
+  border-radius: 20%;
+}
+
+.mySlides {
+  display: none;
+}
+.mySlides img {
+  height: 300px;
+  border-radius: 10px;
+}
+
+.dot {
+  height: 13px;
+  width: 13px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  -webkit-transition: background-color 0.6s ease;
+          transition: background-color 0.6s ease;
+}
+
+.dots {
   width: 100%;
   text-align: center;
-  padding-top: 100px;
+}
+
+.active {
+  background-color: #717171;
+}
+
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  -webkit-animation-name: fade;
+          animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+          animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {
+    opacity: .4;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes fade {
+  from {
+    opacity: .4;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.follow-us {
+  position: relative;
+  float: right;
+  width: 200px;
+  height: 300px;
+  margin-top: 10px;
+  margin-right: 10px;
+}
+
+.follow-us-text {
+  position: relative;
+  font-size: 30px;
+  text-align: center;
+  padding-top: 10px;
+}
+
+.fb {
+  position: relative;
+  float: left;
+  width: 50px;
+  height: 50px;
+  margin: 20px;
+  background: url("https://facebookbrand.com/wp-content/themes/fb-branding/prj-fb-branding/assets/images/fb-art.png") no-repeat;
+  background-size: 50px 50px;
+  opacity: 0.8;
+}
+
+.twitter {
+  position: relative;
+  float: left;
+  width: 50px;
+  height: 50px;
+  margin: 20px;
+  background: url("http://www.clipartkid.com/images/856/new-twitter-logo-vector-eps-free-graphics-download-C44755-clipart.png") no-repeat;
+  background-size: 50px 50px;
+  opacity: 0.8;
+}
+
+.instagram {
+  position: relative;
+  float: left;
+  width: 50px;
+  height: 50px;
+  margin: 20px;
+  background: url("http://3835642c2693476aa717-d4b78efce91b9730bcca725cf9bb0b37.r51.cf1.rackcdn.com/Instagram_App_Large_May2016_200.png") no-repeat;
+  opacity: 0.8;
+  background-size: 50px 50px;
+}
+
+.tumblr {
+  position: relative;
+  float: left;
+  width: 50px;
+  height: 50px;
+  margin: 20px;
+  background: url("http://vignette3.wikia.nocookie.net/logopedia/images/b/bf/Tumblr_5.png/revision/latest?cb=20150423031255s") no-repeat;
+  background-size: 50px 50px;
+  opacity: 0.8;
+}
+
+.fb:hover,
+.twitter:hover,
+.instagram:hover,
+.tumblr:hover {
+  opacity: 1;
+  -webkit-transition: 300ms;
+          transition: 300ms;
+  cursor: pointer;
+}
+
+footer {
+  position: relative;
+  float: left;
+  width: 100%;
+  text-align: center;
+  margin-top: 30px;
+}
+footer span {
   padding-bottom: 10px;
 }
 
-/* 100% Image Width on Smaller Screens */
-@media only screen and (max-width: 700px) {
-  .modal-content {
-    width: 100%;
-  }
-}
 /* Smartphones (portrait and landscape) ----------- */
 @media (min-width: 320px) and (max-width: 480px) {
-  .naslov {
-    padding-left: 30%;
+  .container {
+    width: 100%;
   }
 
-  h1 {
-    font-size: 20px;
+  header {
+    height: 100px;
+  }
+  header .wrapper {
+    width: 100%;
+    margin: 0 auto;
+  }
+  header .title {
+    padding: 0;
+    font-size: 30px;
+  }
+  header .title span {
+    font-size: 15px;
+  }
+  header .authors {
+    font-size: 15px;
+  }
+  header .tab-holder {
+    margin-top: 5px;
+    font-size: 10px;
   }
 
-  h4 {
-    font-size: 13px;
-    padding-top: 35px;
+  .container-left,
+  .container-right,
+  .follow-us {
+    display: none;
   }
 
   .content {
-    width: 250px;
+    width: 100vw;
+    overflow: hidden;
+  }
+
+  .slideshow-container {
+    margin-top: 5px;
+    width: 95%;
+    height: 100px;
+  }
+
+  .mySlides img {
+    height: 100px;
+  }
+
+  .dot {
+    height: 5px;
+    width: 5px;
+  }
+
+  .content-item {
+    height: 100px;
+    margin-top: 5px;
+    width: 100vw;
+  }
+  .content-item img {
+    width: 100px;
+  }
+  .content-item .content-header-text {
+    width: 200px;
+    height: 20%;
+    font-size: 15px;
+    padding: 10px 10px;
+  }
+  .content-item .content-text {
+    width: 200px;
+    height: 79%;
+    font-size: 10px;
+    padding: 0 10px;
   }
 }
 /* iPads (portrait and landscape) ----------- */
 @media (min-width: 768px) and (max-width: 1024px) {
-  .naslov {
-    padding-left: 35%;
+  .container {
+    width: 80%;
+    margin: 0 auto;
   }
 
-  h1 {
-    font-size: 35px;
+  header {
+    height: 100px;
+  }
+  header .wrapper {
+    width: 100%;
+    margin: 0 auto;
+  }
+  header .title {
+    padding: 0;
+    font-size: 30px;
+  }
+  header .title span {
+    font-size: 15px;
+  }
+  header .authors {
+    font-size: 15px;
+  }
+  header .tab-holder {
+    margin-top: 5px;
+    font-size: 10px;
   }
 
-  h4 {
-    padding-top: 42px;
+  .container-left,
+  .container-right,
+  .follow-us {
+    display: none;
   }
 
   .content {
-    width: 600px;
+    width: 100vw;
+    overflow: hidden;
+  }
+
+  .slideshow-container {
+    margin-top: 5px;
+    width: 80%;
+    height: 200px;
+  }
+
+  .mySlides img {
+    height: 200px;
+  }
+
+  .dot {
+    height: 5px;
+    width: 5px;
+  }
+
+  .content-item {
+    height: 100px;
+    margin-top: 5px;
+    width: 100%;
+  }
+  .content-item img {
+    width: 100px;
+  }
+  .content-item .content-header-text {
+    width: 400px;
+    height: 20%;
+    font-size: 25px;
+    padding: 10px 10px;
+  }
+  .content-item .content-text {
+    width: 400px;
+    height: 79%;
+    font-size: 17px;
+    padding: 0 10px;
   }
 }
 @media (min-width: 481px) and (max-width: 767px) {
-  .naslov {
-    padding-left: 35%;
+  .container-left,
+  .follow-us {
+    display: none;
   }
 
-  h1 {
-    font-size: 28px;
+  .container {
+    width: 100%;
   }
 
-  h4 {
-    font-size: 18px;
-    padding-top: 37px;
+  header {
+    height: 100px;
+  }
+  header .wrapper {
+    width: 100%;
+    margin: 0 auto;
+  }
+  header .title {
+    padding: 0;
+    font-size: 30px;
+  }
+  header .title span {
+    font-size: 15px;
+  }
+  header .authors {
+    font-size: 15px;
+  }
+  header .tab-holder {
+    margin-top: 5px;
+    font-size: 10px;
+  }
+
+  .container-left,
+  .container-right,
+  .follow-us {
+    display: none;
   }
 
   .content {
-    width: 600px;
+    width: 100vw;
+    overflow: hidden;
+  }
+
+  .slideshow-container {
+    margin-top: 5px;
+    width: 95%;
+    height: 150px;
+  }
+
+  .mySlides img {
+    height: 150px;
+  }
+
+  .dot {
+    height: 5px;
+    width: 5px;
+  }
+
+  .content-item {
+    height: 100px;
+    margin-top: 5px;
+    width: 100vw;
+  }
+  .content-item img {
+    width: 100px;
+  }
+  .content-item .content-header-text {
+    width: 300px;
+    height: 20%;
+    font-size: 15px;
+    padding: 10px 10px;
+  }
+  .content-item .content-text {
+    width: 200px;
+    height: 79%;
+    font-size: 10px;
+    padding: 0 10px;
   }
 }

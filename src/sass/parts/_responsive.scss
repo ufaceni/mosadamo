@@ -1,56 +1,262 @@
-/* 100% Image Width on Smaller Screens */
-@media only screen and (max-width: 700px){
-    .modal-content {
-        width: 100%;
-    }
-}
 /* Smartphones (portrait and landscape) ----------- */
-@media  (min-width : 320px) and (max-width : 480px) {
-    .naslov{
-        padding-left:30%;
+@media  (min-width: 320px) and (max-width: 480px) {
+     .container{
+         width:100%;
+     }
+     
+     header {
+         height: 100px;
+
+         .wrapper {
+             width:100%;
+             margin: 0 auto;
+         }
+
+         .title {
+             padding: 0;
+             font-size: 30px;
+
+             span{
+                 font-size: 15px;
+             }
+         }
+
+         .authors {
+             font-size: 15px;
+         }
+
+         .tab-holder {
+             margin-top: 5px;
+             font-size: 10px;
+         }
+     }
+
+     .container-left,
+     .container-right,
+     .follow-us {
+        display: none;
     }
-    h1{
-        font-size:20px;
-    }
-    h4{
-        font-size:13px;
-        padding-top:35px;
-    }
+    
     .content{
-       
-        width:250px;
+        width: 100vw;
+        overflow: hidden;
     }
+    
+    .slideshow-container {
+        margin-top: 5px;
+        width:95%;
+        height:100px;
+    }
+
+    .mySlides {
+        img {
+            height: 100px;
+        }
+    }
+
+    .dot {
+        height: 5px;
+        width: 5px;
+    }
+
+    .content-item {
+        height: 100px;
+        margin-top: 5px;
+        width: 100vw;
+        img {
+            width: 100px;
+        }
+
+        .content-header-text {
+            width: 200px;
+            height: 20%;
+            font-size: 15px;
+            padding: 10px 10px;
+        }
+
+        .content-text {
+            width: 200px;
+            height: 79%;
+            font-size: 10px;
+            padding: 0 10px;
+        }
+    }
+
 }
 
 /* iPads (portrait and landscape) ----------- */
-@media (min-width : 768px) and (max-width : 1024px) {
-    .naslov{
-        padding-left:35%;
+@media (min-width: 768px) and (max-width: 1024px) {
+    .container{
+         width:80%;
+         margin: 0 auto;
+     }
+     
+     header {
+         height: 100px;
+
+         .wrapper {
+             width:100%;
+             margin: 0 auto;
+         }
+
+         .title {
+             padding: 0;
+             font-size: 30px;
+
+             span{
+                 font-size: 15px;
+             }
+         }
+
+         .authors {
+             font-size: 15px;
+         }
+
+         .tab-holder {
+             margin-top: 5px;
+             font-size: 10px;
+         }
+     }
+
+     .container-left,
+     .container-right,
+     .follow-us {
+        display: none;
     }
-    h1{
-        font-size:35px;
-    }
-    h4{
     
-        padding-top:42px;
-    }
     .content{
-        width:600px;
+        width: 100vw;
+        overflow: hidden;
     }
+    
+    .slideshow-container {
+        margin-top: 5px;
+        width:80%;
+        height:200px;
+    }
+
+    .mySlides {
+        img {
+            height: 200px;
+        }
+    }
+
+    .dot {
+        height: 5px;
+        width: 5px;
+    }
+
+    .content-item {
+        height: 100px;
+        margin-top: 5px;
+        width: 100%;
+        img {
+            width: 100px;
+        }
+
+        .content-header-text {
+            width: 400px;
+            height: 20%;
+            font-size: 25px;
+            padding: 10px 10px;
+        }
+
+        .content-text {
+            width: 400px;
+            height: 79%;
+            font-size: 17px;
+            padding: 0 10px;
+        }
+    }
+
 }
 
-@media (min-width : 481px) and (max-width : 767px) {
-    .naslov{
-        padding-left:35%;
+@media (min-width: 481px) and (max-width: 767px) {
+    .container-left,
+    .follow-us {
+        display: none;
     }
-    h1{
-        font-size:28px;
+
+    .container{
+         width:100%;
+     }
+     
+     header {
+         height: 100px;
+
+         .wrapper {
+             width:100%;
+             margin: 0 auto;
+         }
+
+         .title {
+             padding: 0;
+             font-size: 30px;
+
+             span{
+                 font-size: 15px;
+             }
+         }
+
+         .authors {
+             font-size: 15px;
+         }
+
+         .tab-holder {
+             margin-top: 5px;
+             font-size: 10px;
+         }
+     }
+
+     .container-left,
+     .container-right,
+     .follow-us {
+        display: none;
     }
-    h4{
-        font-size:18px;
-        padding-top:37px;
-    }
+    
     .content{
-        width:600px;
+        width: 100vw;
+        overflow: hidden;
     }
+    
+    .slideshow-container {
+        margin-top: 5px;
+        width:95%;
+        height:150px;
+    }
+
+    .mySlides {
+        img {
+            height: 150px;
+        }
+    }
+
+    .dot {
+        height: 5px;
+        width: 5px;
+    }
+
+    .content-item {
+        height: 100px;
+        margin-top: 5px;
+        width: 100vw;
+        img {
+            width: 100px;
+        }
+
+        .content-header-text {
+            width: 300px;
+            height: 20%;
+            font-size: 15px;
+            padding: 10px 10px;
+        }
+
+        .content-text {
+            width: 200px;
+            height: 79%;
+            font-size: 10px;
+            padding: 0 10px;
+        }
+    }
+
 }

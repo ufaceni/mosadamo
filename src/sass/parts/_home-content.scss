@@ -1,14 +1,15 @@
 .content-item {
-    margin-top: 30px;
+    position: relative;
+    float: left;
+    margin-top: 10px;
     width: 100%;
-    height: 300px;
+    height: 150px;
     background: $main-content-color;
-    border-radius: 30px;
 
     img {
         position: relative;
         float: left;
-        width: 300px;
+        width: 150px;
         height: 100%;
         opacity: 0.9;
     }
@@ -24,11 +25,17 @@
         float: left;
         width: 500px;
         padding: 20px 20px;
+        opacity: 0.8;
 
         font: {
-                size: 30px;
+                size: 25px;
                 weight: bold;
             }
+    }
+
+    .content-header-text:hover{
+        opacity: 1;
+        cursor: pointer;
     }
 
     .content-text {
@@ -38,4 +45,125 @@
         padding-left: 20px;
         font-style: italic;
     }
+}
+
+.slideshow-container {
+    margin-top: 10px;
+    max-width: 2000px;
+    position: relative;
+    border-radius: 20%;
+}
+
+.mySlides {
+    display: none;
+
+    img {
+        height:300px;
+        border-radius: 10px;
+    }
+}
+
+.dot {
+  height: 13px;
+  width: 13px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.dots{
+    width: 100%;
+    text-align: center;
+}
+
+.active {
+  background-color: #717171;
+}
+
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+.follow-us{
+    position: relative;
+    float: right;
+    width: 200px;
+    height: 300px;
+    margin-top: 10px;
+    margin-right: 10px;
+}
+
+.follow-us-text {
+    position: relative;
+    font-size: 30px;
+    text-align: center;
+    padding-top: 10px;
+}
+
+.fb {
+    position: relative;
+    float: left;
+    width: 50px;
+    height: 50px;
+    margin: 20px;
+    background: url('https://facebookbrand.com/wp-content/themes/fb-branding/prj-fb-branding/assets/images/fb-art.png') no-repeat;
+    background-size: 50px 50px;
+    opacity: 0.8;
+}
+
+.twitter{
+    position: relative;
+    float: left;
+    width: 50px;
+    height: 50px;
+    margin: 20px ;
+    background: url('http://www.clipartkid.com/images/856/new-twitter-logo-vector-eps-free-graphics-download-C44755-clipart.png') no-repeat;
+    background-size: 50px 50px;
+    opacity: 0.8;
+}
+
+.instagram {
+    position: relative;
+    float: left;
+    width: 50px;
+    height: 50px;
+    margin: 20px;
+    background: url('http://3835642c2693476aa717-d4b78efce91b9730bcca725cf9bb0b37.r51.cf1.rackcdn.com/Instagram_App_Large_May2016_200.png') no-repeat;
+    opacity: 0.8;
+    background-size: 50px 50px;
+}
+
+.tumblr{
+    position: relative;
+    float: left;
+    width: 50px;
+    height: 50px;
+    margin: 20px ;
+    background: url('http://vignette3.wikia.nocookie.net/logopedia/images/b/bf/Tumblr_5.png/revision/latest?cb=20150423031255s') no-repeat;
+    background-size: 50px 50px;
+    opacity: 0.8;
+}
+
+.fb:hover,
+.twitter:hover,
+.instagram:hover,
+.tumblr:hover {
+    opacity: 1;
+    transition: 300ms;
+    cursor: pointer;
 }

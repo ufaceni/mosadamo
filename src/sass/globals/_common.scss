@@ -1,5 +1,5 @@
 .container{
-    width:900px;
+    width:60%;
     margin:0 auto;
 }
 
@@ -8,3 +8,15 @@
   display: table;
   clear: both;
 } 
+
+.content-left {
+  position: relative;
+  float: left;
+  width: 20%;
+  display: block;
+}
+
+.content-right {
+  float: right;
+  width: 18%;
+}
